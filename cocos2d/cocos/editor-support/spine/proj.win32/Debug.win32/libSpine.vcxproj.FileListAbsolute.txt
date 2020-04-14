@@ -1,0 +1,2 @@
+E:\build\Prologue\proj.win32\Debug.win32\libSpine.pdb
+E:\build\Prologue\cocos2d\cocos\editor-support\spine\proj.win32\Debug.win32\libSpine.pdb
