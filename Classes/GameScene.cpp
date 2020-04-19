@@ -30,13 +30,11 @@ bool GameScene::init()
     }
 
 
-    Traveler* traveler = new Traveler;
-    Beast* beast = new Beast;
-    CampFire* fire = new CampFire;
+
 
     makeScene();
 
-    this->addChild(fire->getMenu(), 3);
+
 
 
     return true;
@@ -44,20 +42,26 @@ bool GameScene::init()
 
 
 void GameScene::makeScene() {
-    auto visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
+    
+
+    Traveler* traveler = new Traveler;
+    Beast* beast = new Beast;
+    CampFire* fire = new CampFire;
 
     cocos2d::Label* label = cocos2d::Label::createWithTTF("Game Scene", "fonts/arial.ttf", 26);
-    cocos2d::Sprite* travelerSprite = cocos2d::Sprite::create("img/traveler_sketch.png");
-    cocos2d::Sprite* beastSprite = cocos2d::Sprite::create("img/beast_sketch.png");
+    cocos2d::ui::Button* travelerSprite = traveler->getButton();
+    cocos2d::ui::Button* beastSprite = beast->getButton();
+    cocos2d::ui::Button* fireSprite = fire->getButton();
     cocos2d::Sprite* background = cocos2d::Sprite::create("img/forest_bg.jpg");
-    cocos2d::Sprite* fire = cocos2d::Sprite::create("img/fire.png");
 
-    travelerSprite->setPosition(visibleSize.width / 2 + visibleSize.width / 4, visibleSize.height / 2 - 50);
+    auto visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
+
+    travelerSprite->setPosition(cocos2d::Vec2(visibleSize.width / 2 + visibleSize.width / 4, visibleSize.height / 2 - 50));
     background->setPosition(visibleSize.width / 2, visibleSize.height / 2);
     background->setScale(1.4);
-    fire->setPosition(visibleSize.width / 2, visibleSize.height / 2 - 65);
-    fire->setScale(0.2);
-    beastSprite->setPosition(visibleSize.width / 2 - visibleSize.width / 5, visibleSize.height / 2 - 50);
+    fireSprite->setPosition(cocos2d::Vec2(visibleSize.width / 2, visibleSize.height / 2 - 65));
+    fireSprite->setScale(0.2);
+    beastSprite->setPosition(cocos2d::Vec2(visibleSize.width / 2 - visibleSize.width / 5, visibleSize.height / 2 - 50));
     travelerSprite->setScale(0.3f);
     beastSprite->setScale(0.4f);
 
@@ -66,6 +70,8 @@ void GameScene::makeScene() {
 
     this->addChild(travelerSprite, 2);
     this->addChild(beastSprite, 2);
-    this->addChild(fire, 2);
+    this->addChild(fireSprite, 2);
     this->addChild(background, 1);
+
+    this->addChild(fire->getMenu(), 3);
 }

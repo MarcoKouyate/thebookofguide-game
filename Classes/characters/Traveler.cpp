@@ -5,6 +5,7 @@ Traveler::Traveler() :
 	Character("The Traveler") 
 {
 	createMenu();
+	button = cocos2d::ui::Button::create("img/traveler_sketch.png");
 }
 
 void Traveler::createMenu() {

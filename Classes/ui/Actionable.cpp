@@ -20,3 +20,7 @@ cocos2d::Menu* Actionable::getMenu() {
 	// create menu, it's an autorelease object
 	return cocos2d::Menu::createWithArray(menuItems);
 }
+
+cocos2d::ui::Button* Actionable::getButton() {
+	return button;
+}

@@ -5,6 +5,7 @@ class CampFire : public Actionable {
 public:
 	CampFire() {
 		createMenu();
+		button = cocos2d::ui::Button::create("img/fire.png");
 	}
 
 	void createMenu() {

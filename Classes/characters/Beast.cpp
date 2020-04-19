@@ -4,6 +4,7 @@ Beast::Beast ():
 	Character("The Beast") 
 {
 	createMenu();
+	button = cocos2d::ui::Button::create("img/beast_sketch.png");
 }
 
 
