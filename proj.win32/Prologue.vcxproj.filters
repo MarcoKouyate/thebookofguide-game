@@ -10,39 +10,81 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\characters">
+      <UniqueIdentifier>{9ecb20ee-a2a7-4f82-bfce-3a7b5266a547}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scenes">
+      <UniqueIdentifier>{e263901d-3f8a-4f8a-b50f-509a6a39ae56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\logic">
+      <UniqueIdentifier>{2d35b0c8-b83e-4bab-87c2-7d52a8b8bc01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ui">
+      <UniqueIdentifier>{b7284faa-cf50-4927-b752-b11df8331b49}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\characters\Character.cpp">
+      <Filter>src\characters</Filter>
+    </ClCompile>
     <ClCompile Include="..\Classes\AppDelegate.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Character.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\GameScene.cpp">
-      <Filter>src</Filter>
+      <Filter>src\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+      <Filter>src\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\LosingScreen.cpp">
+      <Filter>src\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SceneManager.cpp">
+      <Filter>src\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\characters\Traveler.cpp">
+      <Filter>src\characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\characters\Beast.cpp">
+      <Filter>src\characters</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>win32</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\characters\Beast.h">
+      <Filter>src\characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\characters\Character.h">
+      <Filter>src\characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\characters\Traveler.h">
+      <Filter>src\characters</Filter>
+    </ClInclude>
     <ClInclude Include="..\Classes\AppDelegate.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\HelloWorldScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Character.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\GameScene.h">
-      <Filter>src</Filter>
+      <Filter>src\scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HelloWorldScene.h">
+      <Filter>src\scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LosingScreen.h">
+      <Filter>src\scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SceneManager.h">
+      <Filter>src\scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\logic\state.h">
+      <Filter>src\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ui\Actionable.h">
+      <Filter>src\ui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

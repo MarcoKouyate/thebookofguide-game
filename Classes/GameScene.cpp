@@ -1,6 +1,9 @@
 #include "GameScene.h"
 #include "SimpleAudioEngine.h"
-#include "Character.h"
+#include "characters/Beast.h"
+#include "characters/Traveler.h"
+
+#include "cocos2d.h"
 
 
 cocos2d::Scene* GameScene::createScene()
@@ -14,12 +17,6 @@ cocos2d::Scene* GameScene::createScene()
     return scene;
 }
 
-// Print useful error message instead of segfaulting when files are not there.
-static void problemLoading(const char* filename)
-{
-    printf("Error while loading: %s\n", filename);
-    printf("Depending on how you compiled you might have to add 'Resources/' in front of filenames in GameSceneScene.cpp\n");
-}
 
 // on "init" you need to initialize your instance
 bool GameScene::init()
@@ -32,14 +29,17 @@ bool GameScene::init()
     }
 
 
+    Traveler* traveler = new Traveler;
+    Beast* beast = new Beast;
+
     makeScene();
 
-    Traveler traveler;
-    Beast beast;
-    beast.die();
+    this->addChild(beast->getMenu(), 1);
+
 
     return true;
 }
+
 
 void GameScene::makeScene() {
     auto visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
