@@ -16,6 +16,13 @@
 
 class IActionable {
 public:
-	virtual std::function<void(cocos2d::Ref*)> openMenu() = 0;
 	virtual cocos2d::Menu* getMenu() = 0;
+};
+
+class Actionable : public IActionable {
+public:
+	virtual cocos2d::Menu* getMenu();
+
+protected:
+	std::map<const char*, std::function<void(cocos2d::Ref*)>> actions;
 };

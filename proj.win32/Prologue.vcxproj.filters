@@ -22,6 +22,9 @@
     <Filter Include="src\ui">
       <UniqueIdentifier>{b7284faa-cf50-4927-b752-b11df8331b49}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Props">
+      <UniqueIdentifier>{fb32a0d4-bfe5-4586-a23f-d2f370dd4b46}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -50,6 +53,9 @@
     </ClCompile>
     <ClCompile Include="..\Classes\characters\Beast.cpp">
       <Filter>src\characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ui\Actionable.cpp">
+      <Filter>src\ui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +91,12 @@
     </ClInclude>
     <ClInclude Include="..\Classes\ui\Actionable.h">
       <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\props\Props.h">
+      <Filter>src\Props</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\props\CampFire.h">
+      <Filter>src\Props</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
