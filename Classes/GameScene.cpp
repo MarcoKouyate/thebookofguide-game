@@ -3,6 +3,7 @@
 #include "characters/Beast.h"
 #include "characters/Traveler.h"
 #include "props/CampFire.h"
+#include "props/ActionManager.h"
 
 #include "cocos2d.h"
 
@@ -73,5 +74,6 @@ void GameScene::makeScene() {
     this->addChild(fireSprite, 2);
     this->addChild(background, 1);
 
-    this->addChild(fire->getMenu(), 3);
+    ActionManager::getInstance()->replaceMenu(fire->getMenu());
+    this->addChild(ActionManager::getInstance()->getActiveMenu(), 3);
 }

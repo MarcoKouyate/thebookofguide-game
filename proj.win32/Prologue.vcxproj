@@ -157,6 +157,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClCompile Include="..\Classes\GameScene.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\LosingScreen.cpp" />
+    <ClCompile Include="..\Classes\props\ActionManager.cpp" />
     <ClCompile Include="..\Classes\SceneManager.cpp" />
     <ClCompile Include="..\Classes\ui\Actionable.cpp" />
     <ClCompile Include="main.cpp" />
@@ -170,6 +171,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\logic\state.h" />
     <ClInclude Include="..\Classes\LosingScreen.h" />
+    <ClInclude Include="..\Classes\props\ActionManager.h" />
     <ClInclude Include="..\Classes\props\CampFire.h" />
     <ClInclude Include="..\Classes\props\Props.h" />
     <ClInclude Include="..\Classes\SceneManager.h" />

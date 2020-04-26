@@ -8,6 +8,7 @@ public:
 	void createMenu();
 	void explore();
 	void injectMenu();
+	void openMenu(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type);
 
 	Traveler();
 };

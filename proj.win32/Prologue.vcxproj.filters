@@ -57,6 +57,9 @@
     <ClCompile Include="..\Classes\ui\Actionable.cpp">
       <Filter>src\ui</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\props\ActionManager.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -97,6 +100,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\props\CampFire.h">
       <Filter>src\Props</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\props\ActionManager.h">
+      <Filter>src\ui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
