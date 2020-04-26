@@ -3,12 +3,12 @@
 Beast::Beast (): 
 	Character("The Beast") 
 {
-	createMenu();
-	button = cocos2d::ui::Button::create("img/beast_sketch.png");
+	createActions();
+	button->init("img/beast_sketch.png");
 }
 
 
-void Beast::createMenu() {
+void Beast::createActions() {
 	actions = {
 		std::make_pair("Rest", [this](cocos2d::Ref*) { rest(); }),
 		std::make_pair("Die", [this](cocos2d::Ref*) { die(); })

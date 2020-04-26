@@ -4,5 +4,5 @@
 class Beast : public Character {
 public:
 	Beast();
-	void createMenu();
+	void createActions();
 };

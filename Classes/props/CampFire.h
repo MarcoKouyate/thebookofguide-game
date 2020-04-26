@@ -4,11 +4,11 @@
 class CampFire : public Actionable {
 public:
 	CampFire() {
-		createMenu();
-		button = cocos2d::ui::Button::create("img/fire.png");
+		createActions();
+		button->init("img/fire.png");
 	}
 
-	void createMenu() {
+	void createActions() {
 		actions = {
 		std::make_pair("Fuel the fire", [this](cocos2d::Ref*) { fuel(); }),
 		std::make_pair("Start a fire", [this](cocos2d::Ref*) { startFire(); })

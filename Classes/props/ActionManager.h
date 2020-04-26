@@ -13,7 +13,7 @@ public:
 
 private:
 	static ActionManager* instance;
-	cocos2d::Node* activeMenu;
+	cocos2d::Node* activeMenu = nullptr;
 
 	ActionManager();
 };

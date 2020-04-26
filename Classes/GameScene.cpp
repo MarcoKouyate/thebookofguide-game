@@ -49,7 +49,6 @@ void GameScene::makeScene() {
     Beast* beast = new Beast;
     CampFire* fire = new CampFire;
 
-    cocos2d::Label* label = cocos2d::Label::createWithTTF("Game Scene", "fonts/arial.ttf", 26);
     cocos2d::ui::Button* travelerSprite = traveler->getButton();
     cocos2d::ui::Button* beastSprite = beast->getButton();
     cocos2d::ui::Button* fireSprite = fire->getButton();
@@ -57,6 +56,7 @@ void GameScene::makeScene() {
 
     auto visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
 
+    //placement de sprites
     travelerSprite->setPosition(cocos2d::Vec2(visibleSize.width / 2 + visibleSize.width / 4, visibleSize.height / 2 - 50));
     background->setPosition(visibleSize.width / 2, visibleSize.height / 2);
     background->setScale(1.4);
@@ -66,14 +66,19 @@ void GameScene::makeScene() {
     travelerSprite->setScale(0.3f);
     beastSprite->setScale(0.4f);
 
-    label->setPosition(visibleSize.width / 2, visibleSize.height / 2);
-    //travelerSprite->addChild(label, 1);
+
 
     this->addChild(travelerSprite, 2);
     this->addChild(beastSprite, 2);
     this->addChild(fireSprite, 2);
     this->addChild(background, 1);
+    
+    this->addChild(fire->getMenu(), 3);
+    this->addChild(beast->getMenu(), 3);
+    this->addChild(traveler->getMenu(), 3);
 
-    ActionManager::getInstance()->replaceMenu(fire->getMenu());
-    this->addChild(ActionManager::getInstance()->getActiveMenu(), 3);
+    fire->getMenu()->setVisible(false);
+    beast->getMenu()->setVisible(false);
+    traveler->getMenu()->setVisible(false);
 }
+    

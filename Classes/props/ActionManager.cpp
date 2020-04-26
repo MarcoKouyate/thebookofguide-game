@@ -11,7 +11,11 @@ ActionManager* ActionManager::getInstance() {
 }
 
 void ActionManager::replaceMenu(cocos2d::Node* newMenu) {
+	if (activeMenu != nullptr) {
+		activeMenu->setVisible(false);
+	}
 	activeMenu = newMenu;
+	activeMenu->setVisible(true);
 }
 
 cocos2d::Node* ActionManager::getActiveMenu() {

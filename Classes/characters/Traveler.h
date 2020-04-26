@@ -5,10 +5,9 @@
 
 class Traveler : public Character {
 public:
-	void createMenu();
+	void createActions();
 	void explore();
 	void injectMenu();
-	void openMenu(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type);
 
 	Traveler();
 };
