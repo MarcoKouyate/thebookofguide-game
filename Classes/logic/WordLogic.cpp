@@ -37,12 +37,11 @@ std::vector<std::string> WordLogic::choose(std::string word1, std::string word2,
 std::vector<std::string> WordLogic::getResult() {
 	for (Story& story : stories) {
 		if (story.check(words)) {
-			notify(true);
-			return story.getDialogue();
+			return checkIfRead(story);
 		}
 	}
 
-	notify(false);
+	notifyObservers(false);
 	return { "I don't know what to say" };
 }
 
@@ -54,7 +53,20 @@ void WordLogic::unsubscribe(WordLogicObserver* subscriber) {
 	observers.remove(subscriber);
 }
 
-void WordLogic::notify(bool result) {
+std::vector<std::string> WordLogic::checkIfRead(Story& story) {
+	std::vector<std::string> dialogues = story.getDialogue();
+	if (story.isRead) {
+		dialogues.push_back("But I already told you that so it doesn't really help me...");
+	}
+	else {
+		notifyObservers(true);
+		story.isRead = true;
+	}
+
+	return dialogues;
+}
+
+void WordLogic::notifyObservers(bool result) {
 	for (auto observer : observers) {
 		observer->updateFromWordLogic(result);
 	}

@@ -13,7 +13,10 @@ public:
 
 	std::vector<std::string> getDialogue();
 
+	bool isRead = false;
+
 private:
 	std::vector<std::string> activators;
 	std::vector<std::string> dialogue;
+
 };

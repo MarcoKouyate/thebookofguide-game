@@ -12,7 +12,7 @@ public:
 
 class WordLogicSubject {
 public:
-	virtual void notify(bool result) = 0;
+	virtual void notifyObservers(bool result) = 0;
 	virtual void subscribe(WordLogicObserver* observer) = 0;
 	virtual void unsubscribe(WordLogicObserver* observer) = 0;
 };
@@ -26,7 +26,7 @@ public:
 	
 	void subscribe(WordLogicObserver* observer) override;
 	void unsubscribe(WordLogicObserver* observer) override;
-	void notify(bool result) override;
+	void notifyObservers(bool result) override;
 	
 	//void reset(); //to unselect all
 	std::vector<std::string> choose(std::string word1, std::string word2, std::string word3);
@@ -35,6 +35,8 @@ public:
 	WordLogic();
 
 private:
+	std::vector<std::string> checkIfRead(Story& story);
+
 	std::map<std::string, bool> words;
 	std::list<WordLogicObserver*> observers;
 	std::vector<Story> stories;
