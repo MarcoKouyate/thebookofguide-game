@@ -25,6 +25,9 @@
     <Filter Include="src\Props">
       <UniqueIdentifier>{fb32a0d4-bfe5-4586-a23f-d2f370dd4b46}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\tools">
+      <UniqueIdentifier>{57c8a411-05bc-43c8-b463-1443e68c0543}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -58,6 +61,18 @@
       <Filter>src\ui</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\props\ActionManager.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\logic\WordLogic.cpp">
+      <Filter>src\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\logic\Story.cpp">
+      <Filter>src\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ui\DialogueBox.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ui\WordSelectionMenu.cpp">
       <Filter>src\ui</Filter>
     </ClCompile>
   </ItemGroup>
@@ -102,6 +117,21 @@
       <Filter>src\Props</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\props\ActionManager.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\logic\WordLogic.h">
+      <Filter>src\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tools\Console.h">
+      <Filter>src\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\logic\Story.h">
+      <Filter>src\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ui\DialogueBox.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ui\WordSelectionMenu.h">
       <Filter>src\ui</Filter>
     </ClInclude>
   </ItemGroup>

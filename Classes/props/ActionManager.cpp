@@ -21,7 +21,3 @@ void ActionManager::replaceMenu(cocos2d::Node* newMenu) {
 cocos2d::Node* ActionManager::getActiveMenu() {
 	return activeMenu;
 }
-
-ActionManager::ActionManager() {
-
-}
