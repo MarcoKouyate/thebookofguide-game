@@ -2,7 +2,7 @@
 
 #include <string>
 #include "cocos2d.h"
-#include "SceneManager.h"
+#include "logic/GameLogic.h"
 #include "ui/Actionable.h"
 
 class ICharacter {

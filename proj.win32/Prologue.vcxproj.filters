@@ -45,9 +45,6 @@
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
       <Filter>src\scenes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\LosingScreen.cpp">
-      <Filter>src\scenes</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\SceneManager.cpp">
       <Filter>src\scenes</Filter>
     </ClCompile>
@@ -75,6 +72,12 @@
     <ClCompile Include="..\Classes\ui\WordSelectionMenu.cpp">
       <Filter>src\ui</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\logic\GameLogic.cpp">
+      <Filter>src\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\InterludeScreen.cpp">
+      <Filter>src\scenes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -96,9 +99,6 @@
       <Filter>src\scenes</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\HelloWorldScene.h">
-      <Filter>src\scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\LosingScreen.h">
       <Filter>src\scenes</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\SceneManager.h">
@@ -133,6 +133,15 @@
     </ClInclude>
     <ClInclude Include="..\Classes\ui\WordSelectionMenu.h">
       <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\logic\GameLogic.h">
+      <Filter>src\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\InterludeScreen.h">
+      <Filter>src\scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tools\CommonFileParse.h">
+      <Filter>src\tools</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

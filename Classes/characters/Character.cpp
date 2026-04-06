@@ -6,7 +6,7 @@ void Character::die() {
 	std::string message = name + " has reached the end of the journey.";
 	cocos2d::log(message.c_str());
 
-	SceneManager::getInstance()->lose();
+	GameLogic::getInstance()->lose();
 }
 
 void Character::rest() {

@@ -42,14 +42,16 @@ cocos2d::ui::Button* Actionable::getButton() {
 
 void Actionable::openMenu(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type)
 {
-	switch (type)
-	{
-	case cocos2d::ui::Widget::TouchEventType::ENDED:
-		DialogueBox::getInstance()->disable();
-		ActionManager::getInstance()->replaceMenu(getMenu());
-		break;
+	if (isSelectable) {
+		switch (type)
+		{
+		case cocos2d::ui::Widget::TouchEventType::ENDED:
+			DialogueBox::getInstance()->disable();
+			ActionManager::getInstance()->replaceMenu(getMenu());
+			break;
 
-	default:
-		break;
+		default:
+			break;
+		}
 	}
 }

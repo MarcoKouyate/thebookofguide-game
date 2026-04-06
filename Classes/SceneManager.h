@@ -1,17 +1,9 @@
 #pragma once
+#include <string>
 
 class SceneManager {
 public:
-	void lose();
-
-	static SceneManager* getInstance();
-
-	
-
-private:
-    /* Here will be the instance stored. */
-    static SceneManager* instance;
-
-    /* Private constructor to prevent instancing. */
-    SceneManager();
+	void interlude(const std::string& title);
+	void scene();
+    void startGame();
 };

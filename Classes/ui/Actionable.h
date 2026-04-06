@@ -8,6 +8,7 @@ class Actionable {
 public:
 	Actionable(){
 		button = cocos2d::ui::Button::create();
+		isSelectable = false;
 		button->addTouchEventListener(CC_CALLBACK_2(Actionable::openMenu, this));
 	}
 
@@ -23,4 +24,5 @@ protected:
 	cocos2d::ui::Button* button = nullptr;
 	std::map<const char*, std::function<void(cocos2d::Ref*)>> actions;
 	cocos2d::Menu* menu = nullptr;
+	bool isSelectable = false;
 };

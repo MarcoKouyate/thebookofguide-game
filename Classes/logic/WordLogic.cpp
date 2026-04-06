@@ -1,11 +1,13 @@
 #include "WordLogic.h"
 #include "tools/Console.h"
+#include "tools/CommonFileParse.h"
 
 WordLogic::WordLogic() {
-	stories.push_back(Story("Travel", "Book", "Write", "I like to Write what I see during my Travel around the world in this Book"));
-	stories.push_back(Story("Travel", "Book", "Oasis", "Oasis told me to get a Book for my Travel"));
-	stories.push_back(Story("Travel", "Gluttony", "Oasis", "Oasis is always Hungry when we travel Together"));
-	stories.push_back(Story("Ice Cream", "Handbag", "Oasis", std::vector<std::string>({ "Hello mate", "How are you ?"})));
+	std::vector < std::vector<std::string>> dialogues = parse_tsv("./dialogues/dialogues_prototypes02.tsv");
+
+	for (const auto& dialogue : dialogues) {
+		stories.push_back(Story(dialogue.at(0), dialogue.at(1), dialogue.at(2), std::vector<std::string>(dialogue.begin() + 3, dialogue.end())));
+	}
 }
 
 void WordLogic::select(std::string word) {

@@ -1,24 +1,19 @@
 #include "SceneManager.h"
-#include "LosingScreen.h"
+#include "InterludeScreen.h"
 #include "cocos/base/CCDirector.h"
+#include "GameScene.h"
 
-SceneManager* SceneManager::instance = nullptr;
-
-SceneManager::SceneManager()
-{}
-
-void SceneManager::lose() {
-	cocos2d::log("GAME OVER");
-	auto losingScreen = LosingScreen::createScene();
-	cocos2d::Director::getInstance()->replaceScene(losingScreen);
+void SceneManager::scene() {
+	interlude("Day 1");
 }
 
-SceneManager* SceneManager::getInstance(){
-	if (!instance)
-	{ 
-		instance = new SceneManager;
-	}
-		
+void SceneManager::startGame() {
+	auto gameScene = GameScene::createScene();
+	cocos2d::Director::getInstance()->runWithScene(gameScene);
+}
 
-	return instance;
+void SceneManager::interlude(const std::string& title) {
+	auto interludeScreen = InterludeScreen::createScene();
+	interludeScreen->changeTitle(title);
+	cocos2d::Director::getInstance()->replaceScene(interludeScreen);
 }

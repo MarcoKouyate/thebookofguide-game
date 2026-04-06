@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\characters">
+      <UniqueIdentifier>{9ecb20ee-a2a7-4f82-bfce-3a7b5266a547}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scenes">
+      <UniqueIdentifier>{e263901d-3f8a-4f8a-b50f-509a6a39ae56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\logic">
+      <UniqueIdentifier>{2d35b0c8-b83e-4bab-87c2-7d52a8b8bc01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ui">
+      <UniqueIdentifier>{b7284faa-cf50-4927-b752-b11df8331b49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Props">
+      <UniqueIdentifier>{fb32a0d4-bfe5-4586-a23f-d2f370dd4b46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tools">
+      <UniqueIdentifier>{57c8a411-05bc-43c8-b463-1443e68c0543}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\characters\Character.cpp">
+      <Filter>src\characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameScene.cpp">
+      <Filter>src\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+      <Filter>src\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\LosingScreen.cpp">
+      <Filter>src\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SceneManager.cpp">
+      <Filter>src\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\characters\Traveler.cpp">
+      <Filter>src\characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\characters\Beast.cpp">
+      <Filter>src\characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ui\Actionable.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\props\ActionManager.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\logic\WordLogic.cpp">
+      <Filter>src\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\logic\Story.cpp">
+      <Filter>src\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ui\DialogueBox.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ui\WordSelectionMenu.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\characters\Beast.h">
+      <Filter>src\characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\characters\Character.h">
+      <Filter>src\characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\characters\Traveler.h">
+      <Filter>src\characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameScene.h">
+      <Filter>src\scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HelloWorldScene.h">
+      <Filter>src\scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LosingScreen.h">
+      <Filter>src\scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SceneManager.h">
+      <Filter>src\scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\logic\state.h">
+      <Filter>src\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ui\Actionable.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\props\Props.h">
+      <Filter>src\Props</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\props\CampFire.h">
+      <Filter>src\Props</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\props\ActionManager.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\logic\WordLogic.h">
+      <Filter>src\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\tools\Console.h">
+      <Filter>src\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\logic\Story.h">
+      <Filter>src\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ui\DialogueBox.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ui\WordSelectionMenu.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
